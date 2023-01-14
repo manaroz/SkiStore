@@ -1,39 +1,39 @@
-import { useState } from "react";
-import Catalog from "../../features/catalog/Catalog";
-import Header from "./Header";
-import CssBaseline from '@mui/material/CssBaseline';
 import { Container, createTheme, ThemeProvider } from "@mui/material";
-import { Route, Routes } from "react-router-dom";
-import HomePage from "../../features/home/HomePage";
-import ProductDetails from "../../features/catalog/ProductDetails";
-import AboutPage from "../../features/about/AboutPage";
-import ContactPage from "../../features/contact/ContactPage";
+import CssBaseline from '@mui/material/CssBaseline';
+import { useState } from "react";
+import { Route, Routes } from "react-router";
 import { ToastContainer } from "react-toastify";
+import AboutPage from "../../features/about/AboutPage";
+import Catalog from "../../features/catalog/Catalog";
+import ProductDetails from "../../features/catalog/ProductDetails";
+import ContactPage from "../../features/contact/ContactPage";
+import HomePage from "../../features/home/HomePage";
+import Header from "./Header";
 import 'react-toastify/dist/ReactToastify.css';
-import NotFound from "../errors/NotFound";
 import ServerError from "../errors/ServerError";
+import NotFound from "../errors/NotFound";
 
 function App() {
+
   const [darkMode, setDarkMode] = useState(false);
-  const paletteType = darkMode ? 'dark' : 'light'
+  const paletteType = darkMode ? 'dark' : 'light';
   const theme = createTheme({
     palette: {
       mode: paletteType,
       background: {
-        default: paletteType === 'light' ? '#9289a3' : '#221266'
+        default: paletteType === 'light' ? '#EAEAEA' : '#121212'
       }
     }
   })
-
-  function handleThemeChange() {
+  const handleThemeChange = () => {
     setDarkMode(!darkMode);
   }
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme} >
       <ToastContainer position='bottom-right' hideProgressBar theme='colored' />
       <CssBaseline />
-      <Header darkMode={darkMode} handleThemeChange={handleThemeChange} />
+      <Header darkMode={darkMode} handleThemeChange={handleThemeChange}  />
       <Container>
       <Routes>
           <Route path='/' element={<HomePage />} />
