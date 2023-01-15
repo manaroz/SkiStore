@@ -112,13 +112,13 @@ namespace API.Data
                 },
                 new Product
                 {
-                    Name = "Blue Code Gloves",
+                    Name = "Blue Code Board",
                     Description =
                         "Pellentesque habitant morbi.",
-                    Price = 180,
+                    Price = 1800,
                     PictureUrl = "/images/products/pic4.png",
                     Brand = "VS",
-                    Type = "Gloves",
+                    Type = "Board",
                     QuantityInStock = 100
                 },
                 new Product
