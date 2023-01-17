@@ -65,6 +65,11 @@ $ npm start
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+Password for testing register and login:
+
+```
+Pa$$w0rd
+```
 
 ## Author
 * **Gosia Różańska** - [manaroz](https://github.com/manaroz)
