@@ -1,5 +1,4 @@
 import { Container, createTheme, CssBaseline, ThemeProvider } from "@mui/material";
-//import CssBaseline from '@mui/material/CssBaseline';
 import { useCallback, useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
@@ -13,18 +12,15 @@ import 'react-toastify/dist/ReactToastify.css';
 import ServerError from "../errors/ServerError";
 import NotFound from "../errors/NotFound";
 import BasketPage from "../../features/basket/BasketPage";
-//import { useStoreContext } from "../context/StoreContext";
-//import { getCookie } from "../util/util";
-//import agent from "../api/agent";
 import LoadingComponent from "./LoadingComponent";
 import CheckoutPage from "../../features/checkout/CheckoutPage";
 import { useAppDispatch } from "../store/configureStore";
-//import { setBasket } from "../../features/basket/basketSlice";
 import { fetchBasketAsync } from "../../features/basket/basketSlice";
 import Login from "../../features/account/Login";
 import Register from "../../features/account/Register";
 import { fetchCurrentUser } from "../../features/account/accountSlice";
 import RequireAuth from "./RequireAuth";
+import Orders from "../../features/orders/Orders";
 
 function App() {
 
@@ -66,7 +62,7 @@ function App() {
       <ToastContainer position='bottom-right' hideProgressBar theme='colored' />
       <CssBaseline />
       <Header darkMode={darkMode} handleThemeChange={handleThemeChange} />
-      <Container>
+      <Container sx={{ mt: 4 }}>
         <Routes>
           <Route path='/' element={<HomePage />} />
           <Route path='catalog' element={<Catalog />} />
@@ -84,6 +80,14 @@ function App() {
             element={
               <RequireAuth>
                 <CheckoutPage />
+              </RequireAuth>
+            }
+          />
+          <Route
+            path="/orders"
+            element={
+              <RequireAuth>
+                <Orders />
               </RequireAuth>
             }
           />

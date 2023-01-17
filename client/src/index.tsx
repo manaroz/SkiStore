@@ -3,13 +3,12 @@ import ReactDOM from 'react-dom';
 import './app/layout/styles.css';
 import App from './app/layout/App';
 import reportWebVitals from './reportWebVitals';
-//import { Router } from 'react-router-dom';
 import { BrowserRouter } from './app/router/BrowserRouter';
-//import myHistory from './app/history/history';
-//import { StoreProvider } from './app/context/StoreContext';
 import { store } from './app/store/configureStore';
 import { Provider } from 'react-redux';
 import { createBrowserHistory } from 'history';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 export const history = createBrowserHistory();
 

@@ -10,6 +10,7 @@ export default function ContactPage() {
         <>
             <Typography variant='h2'>
                 {title}
+                -Guest Counter
             </Typography>
             <Typography variant='h5'>
                 The data is: {data}
