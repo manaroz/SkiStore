@@ -39,3 +39,6 @@ Pa$$w0rd
 
 ## Author
 * **Gosia Różańska** - [manaroz](https://github.com/manaroz)
+
+## Teacher
+* **Dariusz Kralewski** - *Academic teacher at the University of Gdańsk and  WSB Merito University Gdańsk* - [Dariusz Kralewski](https://github.com/DariuszKralewski)- THANKS!
