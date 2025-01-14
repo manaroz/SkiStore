@@ -42,3 +42,4 @@ Pa$$w0rd
 
 ## Teacher
 * **Dariusz Kralewski** - *Academic teacher at the University of Gdańsk and  WSB Merito University Gdańsk* - [Dariusz Kralewski](https://github.com/DariuszKralewski)- THANKS!
+* **Neil Cummings** - *Course tutorial* - [TryCatchLearn](https://github.com/TryCatchLearn)- THANKS!
